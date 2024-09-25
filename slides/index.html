@@ -7,8 +7,8 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/reset.css">
-  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/reveal.css">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js/dist/reset.css">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js/dist/reveal.css">
   <style>
     .reveal .sourceCode {  /* see #7635 */
       overflow: visible;
@@ -41,7 +41,7 @@
     }
     @media print {
     pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
     }
     pre.numberSource code
       { counter-reset: source-line 0; }
@@ -96,7 +96,7 @@
     code span.vs { color: #da4453; } /* VerbatimString */
     code span.wa { color: #da4453; } /* Warning */
   </style>
-  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/theme/dracula.css" id="theme">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js/dist/theme/dracula.css" id="theme">
 </head>
 <body>
   <div class="reveal">
@@ -156,25 +156,25 @@ target="_blank">php.net</a><br />
 <h2>Is PHP dead yet ?</h2>
 <table>
 <thead>
-<tr class="header">
+<tr>
 <th>Année</th>
 <th style="text-align: center;">Marché</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td>2010</td>
 <td style="text-align: center;">75%</td>
 </tr>
-<tr class="even">
+<tr>
 <td>2013</td>
 <td style="text-align: center;">75%</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>2016</td>
 <td style="text-align: center;">82%</td>
 </tr>
-<tr class="even">
+<tr>
 <td>2022</td>
 <td style="text-align: center;">78%</td>
 </tr>
@@ -207,44 +207,44 @@ target="_blank">php.net</a><br />
 <h2>Evolution</h2>
 <table>
 <thead>
-<tr class="header">
+<tr>
 <th>Version</th>
 <th style="text-align: center;">Date sortie</th>
 <th>Ajout notables</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td>v1/v2</td>
 <td style="text-align: center;">1994</td>
 <td></td>
 </tr>
-<tr class="even">
+<tr>
 <td>3.0</td>
 <td style="text-align: center;">1997</td>
 <td>Objets / Zend Engine</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>4.0</td>
 <td style="text-align: center;">2000</td>
 <td>Superglobales</td>
 </tr>
-<tr class="even">
+<tr>
 <td>5.0</td>
 <td style="text-align: center;">2004</td>
 <td>PDO / Zend Engine 2</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>5.3</td>
 <td style="text-align: center;">2009</td>
 <td>Namespaces</td>
 </tr>
-<tr class="even">
+<tr>
 <td>7.0</td>
 <td style="text-align: center;">2015</td>
 <td>Performances ++</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>8.0</td>
 <td style="text-align: center;">2020</td>
 <td>Compilation JOT</td>
@@ -345,7 +345,7 @@ class="sourceCode html"><code class="sourceCode html"><span id="cb6-1"><a href="
 <section id="formulaire.php" class="slide level2">
 <h2><code>formulaire.php</code></h2>
 <div class="sourceCode" id="cb7"><pre
-class="sourceCode html"><code class="sourceCode html"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;!doctype </span>html<span class="dt">&gt;</span></span>
+class="sourceCode html"><code class="sourceCode html"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;!doctype</span> html<span class="dt">&gt;</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">html</span><span class="dt">&gt;</span></span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">head</span><span class="dt">&gt;</span></span>
 <span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;</span><span class="kw">meta</span><span class="ot"> charset</span><span class="op">=</span><span class="st">&quot;utf-8&quot;</span><span class="ot"> </span><span class="dt">/&gt;</span></span>
@@ -368,11 +368,11 @@ class="sourceCode php"><code class="sourceCode php"><span id="cb8-1"><a href="#c
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>html<span class="op">&gt;</span></span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>head<span class="op">&gt;</span></span>
 <span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    <span class="op">&lt;</span>meta charset<span class="op">=</span><span class="st">&quot;utf-8&quot;</span> <span class="op">/&gt;</span></span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>    <span class="op">&lt;</span>title<span class="op">&gt;</span><span class="cn">R</span>éponse formulaire <span class="cn">HTML</span><span class="op">&lt;/</span>title<span class="op">&gt;</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>    <span class="op">&lt;</span>title<span class="op">&gt;</span>Réponse formulaire <span class="cn">HTML</span><span class="op">&lt;/</span>title<span class="op">&gt;</span></span>
 <span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;/</span>head<span class="op">&gt;</span></span>
 <span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>body<span class="op">&gt;</span></span>
-<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>    <span class="op">&lt;</span>h1<span class="op">&gt;</span><span class="cn">B</span>onjour <span class="op">&lt;</span><span class="ot">?</span>php <span class="kw">echo</span> <span class="va">$_GET</span>[<span class="st">&#39;nom&#39;</span>] <span class="kw">?&gt;</span> <span class="op">!&lt;/</span>h1<span class="op">&gt;</span></span>
-<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>    <span class="op">&lt;</span>h2<span class="op">&gt;</span><span class="cn">V</span>ous avez <span class="op">&lt;</span><span class="ot">?</span>php <span class="kw">echo</span> <span class="va">$_GET</span>[<span class="st">&#39;age&#39;</span>] <span class="kw">?&gt;</span> ans<span class="op">&lt;/</span>h2<span class="op">&gt;</span></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>    <span class="op">&lt;</span>h1<span class="op">&gt;</span>Bonjour <span class="op">&lt;</span><span class="ot">?</span>php <span class="kw">echo</span> <span class="va">$_GET</span>[<span class="st">&#39;nom&#39;</span>] <span class="kw">?&gt;</span> <span class="op">!&lt;/</span>h1<span class="op">&gt;</span></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>    <span class="op">&lt;</span>h2<span class="op">&gt;</span>Vous avez <span class="op">&lt;</span><span class="ot">?</span>php <span class="kw">echo</span> <span class="va">$_GET</span>[<span class="st">&#39;age&#39;</span>] <span class="kw">?&gt;</span> ans<span class="op">&lt;/</span>h2<span class="op">&gt;</span></span>
 <span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;/</span>body<span class="op">&gt;</span></span>
 <span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;/</span>html<span class="op">&gt;</span></span></code></pre></div>
 </section></section>
@@ -393,8 +393,8 @@ class="sourceCode php"><code class="sourceCode php"><span id="cb8-1"><a href="#c
 <div class="sourceCode" id="cb9"><pre
 class="sourceCode php"><code class="sourceCode php"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co">// variables incorrectes :</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>nom_variable<span class="ot">;</span>  <span class="co">// manque $</span></span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>$<span class="dv">1</span>NomVariable<span class="ot">;</span>  <span class="co">// commence par un chiffre</span></span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="va">$M</span><span class="pp">@</span><span class="cn">V</span>ariable<span class="ot">;</span>  <span class="co">// caractère &#39;@&#39; interdit</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>$<span class="er">1</span>NomVariable<span class="ot">;</span>  <span class="co">// commence par un chiffre</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="va">$M</span><span class="pp">@</span>Variable<span class="ot">;</span>  <span class="co">// caractère &#39;@&#39; interdit</span></span>
 <span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="va">$Nom</span><span class="op">-</span>variable<span class="ot">;</span> <span class="co">// caractère &#39;-&#39; interdit</span></span>
 <span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="va">$Nom</span> variable<span class="ot">;</span> <span class="co">// espace interdit</span></span></code></pre></div>
 <div class="sourceCode" id="cb10"><pre
@@ -424,49 +424,49 @@ class="sourceCode php"><code class="sourceCode php"><span id="cb12-1"><a href="#
 <h2>Opérateurs d’affectation</h2>
 <table>
 <thead>
-<tr class="header">
+<tr>
 <th>exemple</th>
 <th>equivalent</th>
 <th>opération</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td>$a += $b</td>
 <td>$a = $a + $b</td>
 <td>addition</td>
 </tr>
-<tr class="even">
+<tr>
 <td>$a -= $b</td>
 <td>$a = $a - $b</td>
 <td>soustraction</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>$a *= $b</td>
 <td>$a = $a * $b</td>
 <td>multiplication</td>
 </tr>
-<tr class="even">
+<tr>
 <td>$a \= $b</td>
 <td>$a = $a \ $b</td>
 <td>division</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>$a %= $b</td>
 <td>$a = $a % $b</td>
 <td>modulo</td>
 </tr>
-<tr class="even">
+<tr>
 <td>$a **= $b</td>
 <td>$a = $a ** $b</td>
 <td>exponentiation</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>$a .= $b</td>
 <td>$a = $a . $b</td>
 <td>concaténation</td>
 </tr>
-<tr class="even">
+<tr>
 <td>$a ??= $b</td>
 <td>$a = $a ?? $b</td>
 <td>coalescence</td>
@@ -735,45 +735,45 @@ target="_blank">array_search</a></li>
 <h2>Superglobales</h2>
 <table>
 <thead>
-<tr class="header">
+<tr>
 <th>Variable</th>
 <th>Contenu</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td>$GLOBALES</td>
 <td>Les variables globales</td>
 </tr>
-<tr class="even">
+<tr>
 <td>$_SERVER</td>
 <td>Variables de serveur et d’exécution</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>$_GET</td>
 <td>Paramètres d’URL</td>
 </tr>
-<tr class="even">
+<tr>
 <td>$_POST</td>
 <td>Payload de la requête</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>$_FILES</td>
 <td>Fichiers uploadés</td>
 </tr>
-<tr class="even">
+<tr>
 <td>$_COOKIE</td>
 <td>Cookies HTTP</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>$_SESSION</td>
 <td>Variables de session</td>
 </tr>
-<tr class="even">
+<tr>
 <td>$_REQUEST</td>
 <td>$_GET, $_POST et $_COOKIE</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>$_ENV</td>
 <td>Variables d’environnement</td>
 </tr>
@@ -789,37 +789,37 @@ target="_blank">array_search</a></li>
 <h2>Comparer les variables</h2>
 <table>
 <thead>
-<tr class="header">
+<tr>
 <th>Symbole</th>
 <th>Signification</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td>==</td>
 <td>valeurs égales</td>
 </tr>
-<tr class="even">
+<tr>
 <td>===</td>
 <td>égal + même type</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>&gt;</td>
 <td>supérieur</td>
 </tr>
-<tr class="even">
+<tr>
 <td>&lt;</td>
 <td>inférieur</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>&gt;=</td>
 <td>supérieur ou égal</td>
 </tr>
-<tr class="even">
+<tr>
 <td>&lt;=</td>
 <td>inférieur ou égal</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>!=</td>
 <td>différent</td>
 </tr>
@@ -1114,37 +1114,37 @@ class="sourceCode ini"><code class="sourceCode ini"><span id="cb45-1"><a href="#
 <h2>Niveau d’erreurs</h2>
 <table>
 <thead>
-<tr class="header">
+<tr>
 <th>mot-clé</th>
 <th>niveau</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td>E_ERROR</td>
 <td>erreurs fatales</td>
 </tr>
-<tr class="even">
+<tr>
 <td>E_WARNING</td>
 <td>avertissements</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>E_PARSE</td>
 <td>syntaxe</td>
 </tr>
-<tr class="even">
+<tr>
 <td>E_NOTICE</td>
 <td>info</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>E_STRICT</td>
 <td>compatibilité</td>
 </tr>
-<tr class="even">
+<tr>
 <td>E_DEPRECATED</td>
 <td>déprécation</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>E_ALL</td>
 <td>toutes</td>
 </tr>
@@ -1179,16 +1179,10 @@ activée</em></p>
 <pre><code>Warning: Wrong parameter count for fonction() in fichier.php on line 112</code></pre>
 <p>Ne pas hésiter à vérifier la doc</p>
 </section>
-<section id="headers-already-sent" class="slide level2">
-<h2><code>Headers already sent</code></h2>
-<p>Les headers sont <em>envoyés en premier</em> au navigateur</p>
-<p>On les envoie en utilisant la fonction <code>header</code></p>
-<p>Mais d’autres fonctions envoient aussi ces infos,<br />
-comme <code>session_start</code> ou <code>setcookie</code></p>
-<p>Si on met des contenus avant ça génère l’erreur</p>
-<div class="sourceCode" id="cb49"><pre
-class="sourceCode html"><code class="sourceCode html"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">html</span><span class="dt">&gt;</span> <span class="co">&lt;!-- La balise est avant les headers --&gt;</span></span>
-<span id="cb49-2"><a href="#cb49-2" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;?php</span> session_start(); <span class="kw">?&gt;</span></span></code></pre></div>
+<section id="xdebug" class="slide level2">
+<h2>XDEBUG</h2>
+<p>Pour débugger en “temps réel”</p>
+<p><img data-src="./images/stop-on-breakpoint.png" /></p>
 </section></section>
 <section>
 <section id="fichiers" class="title-slide slide level1">
@@ -1199,24 +1193,24 @@ class="sourceCode html"><code class="sourceCode html"><span id="cb49-1"><a href=
 <h2><code>include</code> et <code>include_once</code></h2>
 <p>Permet d’ajouter le contenu d’un autre fichier<br />
 à l’endroit où la fonction est appelée</p>
-<div class="sourceCode" id="cb50"><pre
-class="sourceCode php"><code class="sourceCode php"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="kw">include</span>(<span class="st">&#39;monfichier.php&#39;</span>)<span class="ot">;</span></span>
-<span id="cb50-2"><a href="#cb50-2" aria-hidden="true" tabindex="-1"></a><span class="kw">include_once</span>(<span class="st">&#39;monfichier.php&#39;</span>)<span class="ot">;</span></span></code></pre></div>
+<div class="sourceCode" id="cb49"><pre
+class="sourceCode php"><code class="sourceCode php"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="kw">include</span>(<span class="st">&#39;monfichier.php&#39;</span>)<span class="ot">;</span></span>
+<span id="cb49-2"><a href="#cb49-2" aria-hidden="true" tabindex="-1"></a><span class="kw">include_once</span>(<span class="st">&#39;monfichier.php&#39;</span>)<span class="ot">;</span></span></code></pre></div>
 <p><code>include_once</code> ne va pas ajouter du code déjà inclus</p>
 </section>
 <section id="require-et-require_once" class="slide level2">
 <h2><code>require</code> et <code>require_once</code></h2>
 <p>même principe mais le programme s’arrête<br />
 si le fichier n’existe pas</p>
-<div class="sourceCode" id="cb51"><pre
-class="sourceCode php"><code class="sourceCode php"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="kw">require</span>(<span class="st">&#39;monfichier.php&#39;</span>)<span class="ot">;</span></span>
-<span id="cb51-2"><a href="#cb51-2" aria-hidden="true" tabindex="-1"></a><span class="kw">require_once</span>(<span class="st">&#39;monfichier.php&#39;</span>)<span class="ot">;</span></span></code></pre></div>
+<div class="sourceCode" id="cb50"><pre
+class="sourceCode php"><code class="sourceCode php"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="kw">require</span>(<span class="st">&#39;monfichier.php&#39;</span>)<span class="ot">;</span></span>
+<span id="cb50-2"><a href="#cb50-2" aria-hidden="true" tabindex="-1"></a><span class="kw">require_once</span>(<span class="st">&#39;monfichier.php&#39;</span>)<span class="ot">;</span></span></code></pre></div>
 </section>
 <section id="dirname" class="slide level2">
 <h2><code>dirname</code></h2>
 <p>Permet de savoir dans quel fichier on se trouve</p>
-<div class="sourceCode" id="cb52"><pre
-class="sourceCode php"><code class="sourceCode php"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="kw">include_once</span>(<span class="fu">dirname</span>(<span class="cn">__FILE__</span>) <span class="op">.</span> <span class="st">&#39;/config.inc.php&#39;</span>)<span class="ot">;</span></span></code></pre></div>
+<div class="sourceCode" id="cb51"><pre
+class="sourceCode php"><code class="sourceCode php"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="kw">include_once</span>(<span class="fu">dirname</span>(<span class="cn">__FILE__</span>) <span class="op">.</span> <span class="st">&#39;/config.inc.php&#39;</span>)<span class="ot">;</span></span></code></pre></div>
 <p>Utiliser des chemins relatifs permet<br />
 une meilleure <code>portabilité</code> du code</p>
 </section>
@@ -1238,35 +1232,35 @@ une meilleure <code>portabilité</code> du code</p>
 <section id="html" class="slide level2">
 <h2>HTML</h2>
 <p>On utilise <code>method="GET"</code> dans le formulaire</p>
-<div class="sourceCode" id="cb53"><pre
-class="sourceCode html"><code class="sourceCode html"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">form</span><span class="ot"> action</span><span class="op">=</span><span class="st">&quot;contact.php&quot;</span><span class="ot"> method</span><span class="op">=</span><span class="st">&quot;GET&quot;</span><span class="dt">&gt;</span></span>
-<span id="cb53-2"><a href="#cb53-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">div</span><span class="dt">&gt;</span></span>
-<span id="cb53-3"><a href="#cb53-3" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;</span><span class="kw">label</span><span class="ot"> for</span><span class="op">=</span><span class="st">&quot;prenom&quot;</span><span class="dt">&gt;</span>Prénom<span class="dt">&lt;/</span><span class="kw">label</span><span class="dt">&gt;</span></span>
-<span id="cb53-4"><a href="#cb53-4" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;</span><span class="kw">input</span><span class="ot"> id</span><span class="op">=</span><span class="st">&quot;prenom&quot;</span><span class="ot"> name</span><span class="op">=</span><span class="st">&quot;prenom&quot;</span><span class="dt">&gt;</span></span>
-<span id="cb53-5"><a href="#cb53-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
-<span id="cb53-6"><a href="#cb53-6" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">div</span><span class="dt">&gt;</span></span>
-<span id="cb53-7"><a href="#cb53-7" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;</span><span class="kw">label</span><span class="ot"> for</span><span class="op">=</span><span class="st">&quot;nom&quot;</span><span class="dt">&gt;</span>Nom<span class="dt">&lt;/</span><span class="kw">label</span><span class="dt">&gt;</span></span>
-<span id="cb53-8"><a href="#cb53-8" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;</span><span class="kw">input</span><span class="ot"> id</span><span class="op">=</span><span class="st">&quot;nom&quot;</span><span class="ot"> name</span><span class="op">=</span><span class="st">&quot;nom&quot;</span><span class="dt">&gt;</span></span>
-<span id="cb53-9"><a href="#cb53-9" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
-<span id="cb53-10"><a href="#cb53-10" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">form</span><span class="dt">&gt;</span></span></code></pre></div>
+<div class="sourceCode" id="cb52"><pre
+class="sourceCode html"><code class="sourceCode html"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">form</span><span class="ot"> action</span><span class="op">=</span><span class="st">&quot;contact.php&quot;</span><span class="ot"> method</span><span class="op">=</span><span class="st">&quot;GET&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb52-2"><a href="#cb52-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb52-3"><a href="#cb52-3" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;</span><span class="kw">label</span><span class="ot"> for</span><span class="op">=</span><span class="st">&quot;prenom&quot;</span><span class="dt">&gt;</span>Prénom<span class="dt">&lt;/</span><span class="kw">label</span><span class="dt">&gt;</span></span>
+<span id="cb52-4"><a href="#cb52-4" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;</span><span class="kw">input</span><span class="ot"> id</span><span class="op">=</span><span class="st">&quot;prenom&quot;</span><span class="ot"> name</span><span class="op">=</span><span class="st">&quot;prenom&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb52-5"><a href="#cb52-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb52-6"><a href="#cb52-6" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb52-7"><a href="#cb52-7" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;</span><span class="kw">label</span><span class="ot"> for</span><span class="op">=</span><span class="st">&quot;nom&quot;</span><span class="dt">&gt;</span>Nom<span class="dt">&lt;/</span><span class="kw">label</span><span class="dt">&gt;</span></span>
+<span id="cb52-8"><a href="#cb52-8" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;</span><span class="kw">input</span><span class="ot"> id</span><span class="op">=</span><span class="st">&quot;nom&quot;</span><span class="ot"> name</span><span class="op">=</span><span class="st">&quot;nom&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb52-9"><a href="#cb52-9" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb52-10"><a href="#cb52-10" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">form</span><span class="dt">&gt;</span></span></code></pre></div>
 </section>
 <section id="php" class="slide level2">
 <h2>PHP</h2>
 <p>Via la superglobale <code>$_GET</code><br />
 On peut récupérer les paramètres</p>
-<div class="sourceCode" id="cb54"><pre
-class="sourceCode php"><code class="sourceCode php"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="va">$prenom</span> <span class="op">=</span> <span class="va">$_GET</span>[<span class="st">&#39;prenom&#39;</span>]<span class="ot">;</span></span>
-<span id="cb54-2"><a href="#cb54-2" aria-hidden="true" tabindex="-1"></a><span class="va">$nom</span> <span class="op">=</span> <span class="va">$_GET</span>[<span class="st">&#39;nom&#39;</span>]<span class="ot">;</span></span></code></pre></div>
+<div class="sourceCode" id="cb53"><pre
+class="sourceCode php"><code class="sourceCode php"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="va">$prenom</span> <span class="op">=</span> <span class="va">$_GET</span>[<span class="st">&#39;prenom&#39;</span>]<span class="ot">;</span></span>
+<span id="cb53-2"><a href="#cb53-2" aria-hidden="true" tabindex="-1"></a><span class="va">$nom</span> <span class="op">=</span> <span class="va">$_GET</span>[<span class="st">&#39;nom&#39;</span>]<span class="ot">;</span></span></code></pre></div>
 </section>
 <section id="méthode-post" class="slide level2">
 <h2>Méthode POST</h2>
-<div class="sourceCode" id="cb55"><pre
-class="sourceCode html"><code class="sourceCode html"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">form</span><span class="ot"> action</span><span class="op">=</span><span class="st">&quot;contact.php&quot;</span><span class="ot"> method</span><span class="op">=</span><span class="st">&quot;POST&quot;</span><span class="dt">&gt;</span></span></code></pre></div>
+<div class="sourceCode" id="cb54"><pre
+class="sourceCode html"><code class="sourceCode html"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">form</span><span class="ot"> action</span><span class="op">=</span><span class="st">&quot;contact.php&quot;</span><span class="ot"> method</span><span class="op">=</span><span class="st">&quot;POST&quot;</span><span class="dt">&gt;</span></span></code></pre></div>
 <p>Les données n’apparaissent pas dans l’URL<br />
 Mais on peut quand même les manipuler</p>
-<div class="sourceCode" id="cb56"><pre
-class="sourceCode php"><code class="sourceCode php"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a><span class="va">$prenom</span> <span class="op">=</span> <span class="va">$_POST</span>[<span class="st">&#39;prenom&#39;</span>]<span class="ot">;</span></span>
-<span id="cb56-2"><a href="#cb56-2" aria-hidden="true" tabindex="-1"></a><span class="va">$nom</span> <span class="op">=</span> <span class="va">$_POST</span>[<span class="st">&#39;nom&#39;</span>]<span class="ot">;</span></span></code></pre></div>
+<div class="sourceCode" id="cb55"><pre
+class="sourceCode php"><code class="sourceCode php"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a><span class="va">$prenom</span> <span class="op">=</span> <span class="va">$_POST</span>[<span class="st">&#39;prenom&#39;</span>]<span class="ot">;</span></span>
+<span id="cb55-2"><a href="#cb55-2" aria-hidden="true" tabindex="-1"></a><span class="va">$nom</span> <span class="op">=</span> <span class="va">$_POST</span>[<span class="st">&#39;nom&#39;</span>]<span class="ot">;</span></span></code></pre></div>
 </section>
 <section id="problèmes" class="slide level2">
 <h2>Problèmes</h2>
@@ -1293,8 +1287,8 @@ target="_blank">Nettoyer les données</a></li>
 <section id="exemple-failles-xss" class="slide level2">
 <h2>Exemple: Failles XSS</h2>
 <p>On peut envoyer du HTML dans une variable</p>
-<div class="sourceCode" id="cb57"><pre
-class="sourceCode html"><code class="sourceCode html"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">script</span><span class="dt">&gt;</span><span class="fu">alert</span>(<span class="st">&#39;Badaboum&#39;</span>)<span class="dt">&lt;/</span><span class="kw">script</span><span class="dt">&gt;</span></span></code></pre></div>
+<div class="sourceCode" id="cb56"><pre
+class="sourceCode html"><code class="sourceCode html"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">script</span><span class="dt">&gt;</span><span class="fu">alert</span>(<span class="st">&#39;Badaboum&#39;</span>)<span class="dt">&lt;/</span><span class="kw">script</span><span class="dt">&gt;</span></span></code></pre></div>
 <p>Le navigateur peut interpréter ce code</p>
 <p>et afficher une alerte</p>
 <p><img data-src="./images/alert.jpg" /></p>
@@ -1320,14 +1314,14 @@ target="_blank">htmlspecialchars</a> :</p></li>
 </section>
 <section id="formulaire" class="slide level2">
 <h2>Formulaire</h2>
-<div class="sourceCode" id="cb58"><pre
-class="sourceCode html"><code class="sourceCode html"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- enctype=&quot;multipart/form-data&quot; permet d&#39;envoyer des fichiers --&gt;</span></span>
-<span id="cb58-2"><a href="#cb58-2" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">form</span><span class="ot"> action</span><span class="op">=</span><span class="st">&quot;upload.php&quot;</span><span class="ot"> method</span><span class="op">=</span><span class="st">&quot;POST&quot;</span><span class="ot"> enctype</span><span class="op">=</span><span class="st">&quot;multipart/form-data&quot;</span><span class="dt">&gt;</span></span>
-<span id="cb58-3"><a href="#cb58-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">div</span><span class="dt">&gt;</span></span>
-<span id="cb58-4"><a href="#cb58-4" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;</span><span class="kw">label</span><span class="ot"> for</span><span class="op">=</span><span class="st">&quot;upload&quot;</span><span class="dt">&gt;</span>Fichier<span class="dt">&lt;/</span><span class="kw">label</span><span class="dt">&gt;</span></span>
-<span id="cb58-5"><a href="#cb58-5" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;</span><span class="kw">input</span><span class="ot"> id</span><span class="op">=</span><span class="st">&quot;upload&quot;</span><span class="ot"> name</span><span class="op">=</span><span class="st">&quot;upload&quot;</span><span class="ot"> type</span><span class="op">=</span><span class="st">&quot;file&quot;</span><span class="ot"> </span><span class="dt">/&gt;</span></span>
-<span id="cb58-6"><a href="#cb58-6" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
-<span id="cb58-7"><a href="#cb58-7" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">form</span><span class="dt">&gt;</span></span></code></pre></div>
+<div class="sourceCode" id="cb57"><pre
+class="sourceCode html"><code class="sourceCode html"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- enctype=&quot;multipart/form-data&quot; permet d&#39;envoyer des fichiers --&gt;</span></span>
+<span id="cb57-2"><a href="#cb57-2" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">form</span><span class="ot"> action</span><span class="op">=</span><span class="st">&quot;upload.php&quot;</span><span class="ot"> method</span><span class="op">=</span><span class="st">&quot;POST&quot;</span><span class="ot"> enctype</span><span class="op">=</span><span class="st">&quot;multipart/form-data&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb57-3"><a href="#cb57-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb57-4"><a href="#cb57-4" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;</span><span class="kw">label</span><span class="ot"> for</span><span class="op">=</span><span class="st">&quot;upload&quot;</span><span class="dt">&gt;</span>Fichier<span class="dt">&lt;/</span><span class="kw">label</span><span class="dt">&gt;</span></span>
+<span id="cb57-5"><a href="#cb57-5" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;</span><span class="kw">input</span><span class="ot"> id</span><span class="op">=</span><span class="st">&quot;upload&quot;</span><span class="ot"> name</span><span class="op">=</span><span class="st">&quot;upload&quot;</span><span class="ot"> type</span><span class="op">=</span><span class="st">&quot;file&quot;</span><span class="ot"> </span><span class="dt">/&gt;</span></span>
+<span id="cb57-6"><a href="#cb57-6" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb57-7"><a href="#cb57-7" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">form</span><span class="dt">&gt;</span></span></code></pre></div>
 </section>
 <section id="en-php" class="slide level2">
 <h2>En PHP</h2>
@@ -1348,43 +1342,43 @@ target="_blank">débogage</a></li>
 </section>
 <section id="validation" class="slide level2">
 <h2>Validation</h2>
-<div class="sourceCode" id="cb59"><pre
-class="sourceCode php"><code class="sourceCode php"><span id="cb59-1"><a href="#cb59-1" aria-hidden="true" tabindex="-1"></a><span class="co">// on valide la présence du fichier et les erreurs</span></span>
-<span id="cb59-2"><a href="#cb59-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="kw">isset</span>(<span class="va">$_FILES</span>[<span class="st">&#39;upload&#39;</span>]) <span class="op">&amp;&amp;</span> <span class="va">$_FILES</span>[<span class="st">&#39;upload&#39;</span>][<span class="st">&#39;error&#39;</span>] <span class="op">===</span> <span class="cn">UPLOAD_ERR_OK</span>)</span>
-<span id="cb59-3"><a href="#cb59-3" aria-hidden="true" tabindex="-1"></a>[...]</span>
-<span id="cb59-4"><a href="#cb59-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb59-5"><a href="#cb59-5" aria-hidden="true" tabindex="-1"></a><span class="co">// on valide que la taille est en dessous de la limite</span></span>
-<span id="cb59-6"><a href="#cb59-6" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="va">$_FILES</span>[<span class="st">&#39;screenshot&#39;</span>][<span class="st">&#39;size&#39;</span>] <span class="op">&lt;=</span> <span class="dv">1000000</span>)</span>
-<span id="cb59-7"><a href="#cb59-7" aria-hidden="true" tabindex="-1"></a>[...]</span></code></pre></div>
+<div class="sourceCode" id="cb58"><pre
+class="sourceCode php"><code class="sourceCode php"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a><span class="co">// on valide la présence du fichier et les erreurs</span></span>
+<span id="cb58-2"><a href="#cb58-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="kw">isset</span>(<span class="va">$_FILES</span>[<span class="st">&#39;upload&#39;</span>]) <span class="op">&amp;&amp;</span> <span class="va">$_FILES</span>[<span class="st">&#39;upload&#39;</span>][<span class="st">&#39;error&#39;</span>] <span class="op">===</span> <span class="cn">UPLOAD_ERR_OK</span>)</span>
+<span id="cb58-3"><a href="#cb58-3" aria-hidden="true" tabindex="-1"></a>[...]</span>
+<span id="cb58-4"><a href="#cb58-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb58-5"><a href="#cb58-5" aria-hidden="true" tabindex="-1"></a><span class="co">// on valide que la taille est en dessous de la limite</span></span>
+<span id="cb58-6"><a href="#cb58-6" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="va">$_FILES</span>[<span class="st">&#39;screenshot&#39;</span>][<span class="st">&#39;size&#39;</span>] <span class="op">&lt;=</span> <span class="dv">1000000</span>)</span>
+<span id="cb58-7"><a href="#cb58-7" aria-hidden="true" tabindex="-1"></a>[...]</span></code></pre></div>
 </section>
 <section id="pathinfo" class="slide level2">
 <h2><code>pathinfo</code></h2>
 <p>Permet d’avoir les <a
 href="https://www.php.net/manual/fr/function.pathinfo"
 target="_blank">infos sur un chemin</a> de fichier</p>
-<div class="sourceCode" id="cb60"><pre
-class="sourceCode php"><code class="sourceCode php"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a><span class="va">$path_parts</span> <span class="op">=</span> <span class="fu">pathinfo</span>(<span class="st">&#39;/www/htdocs/inc/lib.inc.php&#39;</span>)<span class="ot">;</span></span>
-<span id="cb60-2"><a href="#cb60-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb60-3"><a href="#cb60-3" aria-hidden="true" tabindex="-1"></a><span class="kw">echo</span> <span class="va">$path_parts</span>[<span class="st">&#39;dirname&#39;</span>]<span class="ot">;</span> <span class="co">// affiche: /www/htdocs/inc</span></span>
-<span id="cb60-4"><a href="#cb60-4" aria-hidden="true" tabindex="-1"></a><span class="kw">echo</span> <span class="va">$path_parts</span>[<span class="st">&#39;basename&#39;</span>]<span class="ot">;</span> <span class="co">// affiche: lib.inc.php</span></span>
-<span id="cb60-5"><a href="#cb60-5" aria-hidden="true" tabindex="-1"></a><span class="kw">echo</span> <span class="va">$path_parts</span>[<span class="st">&#39;extension&#39;</span>]<span class="ot">;</span> <span class="co">// affiche: php</span></span>
-<span id="cb60-6"><a href="#cb60-6" aria-hidden="true" tabindex="-1"></a><span class="kw">echo</span> <span class="va">$path_parts</span>[<span class="st">&#39;filename&#39;</span>]<span class="ot">;</span> <span class="co">// affiche: lib.inc</span></span></code></pre></div>
+<div class="sourceCode" id="cb59"><pre
+class="sourceCode php"><code class="sourceCode php"><span id="cb59-1"><a href="#cb59-1" aria-hidden="true" tabindex="-1"></a><span class="va">$path_parts</span> <span class="op">=</span> <span class="fu">pathinfo</span>(<span class="st">&#39;/www/htdocs/inc/lib.inc.php&#39;</span>)<span class="ot">;</span></span>
+<span id="cb59-2"><a href="#cb59-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb59-3"><a href="#cb59-3" aria-hidden="true" tabindex="-1"></a><span class="kw">echo</span> <span class="va">$path_parts</span>[<span class="st">&#39;dirname&#39;</span>]<span class="ot">;</span> <span class="co">// affiche: /www/htdocs/inc</span></span>
+<span id="cb59-4"><a href="#cb59-4" aria-hidden="true" tabindex="-1"></a><span class="kw">echo</span> <span class="va">$path_parts</span>[<span class="st">&#39;basename&#39;</span>]<span class="ot">;</span> <span class="co">// affiche: lib.inc.php</span></span>
+<span id="cb59-5"><a href="#cb59-5" aria-hidden="true" tabindex="-1"></a><span class="kw">echo</span> <span class="va">$path_parts</span>[<span class="st">&#39;extension&#39;</span>]<span class="ot">;</span> <span class="co">// affiche: php</span></span>
+<span id="cb59-6"><a href="#cb59-6" aria-hidden="true" tabindex="-1"></a><span class="kw">echo</span> <span class="va">$path_parts</span>[<span class="st">&#39;filename&#39;</span>]<span class="ot">;</span> <span class="co">// affiche: lib.inc</span></span></code></pre></div>
 <p>On peut avoir le nom du fichier seul avec <a
 href="https://www.php.net/manual/fr/function.basename"
 target="_blank">basename</a></p>
-<div class="sourceCode" id="cb61"><pre
-class="sourceCode php"><code class="sourceCode php"><span id="cb61-1"><a href="#cb61-1" aria-hidden="true" tabindex="-1"></a><span class="kw">echo</span> <span class="fu">basename</span>(<span class="st">&#39;c:\dossier\fichier.png&#39;</span>)<span class="ot">;</span><span class="co">// affiche: fichier.png</span></span></code></pre></div>
+<div class="sourceCode" id="cb60"><pre
+class="sourceCode php"><code class="sourceCode php"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a><span class="kw">echo</span> <span class="fu">basename</span>(<span class="st">&#39;c:\dossier\fichier.png&#39;</span>)<span class="ot">;</span><span class="co">// affiche: fichier.png</span></span></code></pre></div>
 </section>
 <section id="move_uploaded_file" class="slide level2">
 <h2><code>move_uploaded_file</code></h2>
 <p>Permet de déplacer le fichier sur le serveur</p>
-<div class="sourceCode" id="cb62"><pre
-class="sourceCode php"><code class="sourceCode php"><span id="cb62-1"><a href="#cb62-1" aria-hidden="true" tabindex="-1"></a><span class="va">$source</span> <span class="op">=</span> <span class="va">$_FILES</span>[<span class="st">&#39;upload&#39;</span>][<span class="st">&#39;tmp_name&#39;</span>]<span class="ot">;</span></span>
-<span id="cb62-2"><a href="#cb62-2" aria-hidden="true" tabindex="-1"></a><span class="va">$dest</span> <span class="op">=</span>  <span class="st">&#39;uploads/&#39;</span> <span class="op">.</span> <span class="fu">basename</span>(<span class="va">$_FILES</span>[<span class="st">&#39;upload&#39;</span>][<span class="st">&#39;name&#39;</span>])<span class="ot">;</span></span>
-<span id="cb62-3"><a href="#cb62-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb62-4"><a href="#cb62-4" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="fu">move_uploaded_file</span>(<span class="va">$source</span><span class="ot">,</span> <span class="va">$dest</span>)) {</span>
-<span id="cb62-5"><a href="#cb62-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">echo</span> <span class="st">&#39;Le fichier a été enregistré&#39;</span><span class="ot">;</span></span>
-<span id="cb62-6"><a href="#cb62-6" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb61"><pre
+class="sourceCode php"><code class="sourceCode php"><span id="cb61-1"><a href="#cb61-1" aria-hidden="true" tabindex="-1"></a><span class="va">$source</span> <span class="op">=</span> <span class="va">$_FILES</span>[<span class="st">&#39;upload&#39;</span>][<span class="st">&#39;tmp_name&#39;</span>]<span class="ot">;</span></span>
+<span id="cb61-2"><a href="#cb61-2" aria-hidden="true" tabindex="-1"></a><span class="va">$dest</span> <span class="op">=</span>  <span class="st">&#39;uploads/&#39;</span> <span class="op">.</span> <span class="fu">basename</span>(<span class="va">$_FILES</span>[<span class="st">&#39;upload&#39;</span>][<span class="st">&#39;name&#39;</span>])<span class="ot">;</span></span>
+<span id="cb61-3"><a href="#cb61-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb61-4"><a href="#cb61-4" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="fu">move_uploaded_file</span>(<span class="va">$source</span><span class="ot">,</span> <span class="va">$dest</span>)) {</span>
+<span id="cb61-5"><a href="#cb61-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">echo</span> <span class="st">&#39;Le fichier a été enregistré&#39;</span><span class="ot">;</span></span>
+<span id="cb61-6"><a href="#cb61-6" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 </section></section>
 <section>
 <section id="session" class="title-slide slide level1">
@@ -1401,14 +1395,14 @@ target="_blank">sessions</a> stockée côté serveur</p>
 <section id="activer" class="slide level2">
 <h2>Activer</h2>
 <p>Pour démarrer une session on utilise <code>session_start</code></p>
-<div class="sourceCode" id="cb63"><pre
-class="sourceCode php"><code class="sourceCode php"><span id="cb63-1"><a href="#cb63-1" aria-hidden="true" tabindex="-1"></a><span class="fu">session_start</span>()<span class="ot">;</span></span>
-<span id="cb63-2"><a href="#cb63-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb63-3"><a href="#cb63-3" aria-hidden="true" tabindex="-1"></a><span class="kw">echo</span> <span class="fu">session_id</span>()<span class="ot">;</span> <span class="co">// affiche le numéro de session</span></span>
-<span id="cb63-4"><a href="#cb63-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb63-5"><a href="#cb63-5" aria-hidden="true" tabindex="-1"></a><span class="co">// on peut stocker des données</span></span>
-<span id="cb63-6"><a href="#cb63-6" aria-hidden="true" tabindex="-1"></a><span class="va">$_SESSION</span>[<span class="st">&#39;login&#39;</span>] <span class="op">=</span> <span class="st">&#39;nom@email.fr&#39;</span><span class="ot">;</span></span>
-<span id="cb63-7"><a href="#cb63-7" aria-hidden="true" tabindex="-1"></a><span class="va">$_SESSION</span>[<span class="st">&#39;password&#39;</span>]   <span class="op">=</span> <span class="st">&#39;1234567890&#39;</span><span class="ot">;</span></span></code></pre></div>
+<div class="sourceCode" id="cb62"><pre
+class="sourceCode php"><code class="sourceCode php"><span id="cb62-1"><a href="#cb62-1" aria-hidden="true" tabindex="-1"></a><span class="fu">session_start</span>()<span class="ot">;</span></span>
+<span id="cb62-2"><a href="#cb62-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb62-3"><a href="#cb62-3" aria-hidden="true" tabindex="-1"></a><span class="kw">echo</span> <span class="fu">session_id</span>()<span class="ot">;</span> <span class="co">// affiche le numéro de session</span></span>
+<span id="cb62-4"><a href="#cb62-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb62-5"><a href="#cb62-5" aria-hidden="true" tabindex="-1"></a><span class="co">// on peut stocker des données</span></span>
+<span id="cb62-6"><a href="#cb62-6" aria-hidden="true" tabindex="-1"></a><span class="va">$_SESSION</span>[<span class="st">&#39;login&#39;</span>] <span class="op">=</span> <span class="st">&#39;nom@email.fr&#39;</span><span class="ot">;</span></span>
+<span id="cb62-7"><a href="#cb62-7" aria-hidden="true" tabindex="-1"></a><span class="va">$_SESSION</span>[<span class="st">&#39;password&#39;</span>]   <span class="op">=</span> <span class="st">&#39;1234567890&#39;</span><span class="ot">;</span></span></code></pre></div>
 <p>Ceci rend disponible la variable <code>$_SESSION</code><br />
 On y met les données qu’on veut garder</p>
 </section>
@@ -1426,9 +1420,9 @@ enregistré dans les requêtes précédentes</p>
 effectuée <em>pendant un certain temps</em> (<code>timeout</code>)</p>
 <p>On peut aussi vider <code>$_SESSION</code><br />
 puis appeler <code>session_destroy</code></p>
-<div class="sourceCode" id="cb64"><pre
-class="sourceCode php"><code class="sourceCode php"><span id="cb64-1"><a href="#cb64-1" aria-hidden="true" tabindex="-1"></a><span class="va">$_SESSION</span> <span class="op">=</span> []<span class="ot">;</span></span>
-<span id="cb64-2"><a href="#cb64-2" aria-hidden="true" tabindex="-1"></a><span class="fu">session_destroy</span>()<span class="ot">;</span></span></code></pre></div>
+<div class="sourceCode" id="cb63"><pre
+class="sourceCode php"><code class="sourceCode php"><span id="cb63-1"><a href="#cb63-1" aria-hidden="true" tabindex="-1"></a><span class="va">$_SESSION</span> <span class="op">=</span> []<span class="ot">;</span></span>
+<span id="cb63-2"><a href="#cb63-2" aria-hidden="true" tabindex="-1"></a><span class="fu">session_destroy</span>()<span class="ot">;</span></span></code></pre></div>
 </section></section>
 <section>
 <section id="cookies" class="title-slide slide level1">
@@ -1448,8 +1442,8 @@ puis renvoyée au serveur <em>à chaque requête</em></p>
 href="https://www.php.net/manual/fr/function.setcookie.php"
 target="_blank">setcookie</a> permet de<br />
 <em>créer</em> ou <em>modifier</em> des cookies</p>
-<div class="sourceCode" id="cb65"><pre
-class="sourceCode php"><code class="sourceCode php"><span id="cb65-1"><a href="#cb65-1" aria-hidden="true" tabindex="-1"></a><span class="fu">setcookie</span>(<span class="st">&#39;LOGGED_USER&#39;</span><span class="ot">,</span> <span class="st">&#39;utilisateur@exemple.com&#39;</span>)<span class="ot">;</span></span></code></pre></div>
+<div class="sourceCode" id="cb64"><pre
+class="sourceCode php"><code class="sourceCode php"><span id="cb64-1"><a href="#cb64-1" aria-hidden="true" tabindex="-1"></a><span class="fu">setcookie</span>(<span class="st">&#39;LOGGED_USER&#39;</span><span class="ot">,</span> <span class="st">&#39;utilisateur@exemple.com&#39;</span>)<span class="ot">;</span></span></code></pre></div>
 </section>
 <section id="sécurité" class="slide level2">
 <h2>Sécurité</h2>
@@ -1492,8 +1486,8 @@ qui permettent de les organiser</p>
 </section>
 <section id="exemple-de-requête" class="slide level2">
 <h2>Exemple de requête</h2>
-<div class="sourceCode" id="cb66"><pre
-class="sourceCode sql"><code class="sourceCode sql"><span id="cb66-1"><a href="#cb66-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> <span class="kw">id</span>, name, email, <span class="kw">password</span> <span class="kw">FROM</span> <span class="fu">user</span> <span class="kw">ORDER</span> <span class="kw">BY</span> name <span class="kw">ASC</span></span></code></pre></div>
+<div class="sourceCode" id="cb65"><pre
+class="sourceCode sql"><code class="sourceCode sql"><span id="cb65-1"><a href="#cb65-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> <span class="kw">id</span>, name, email, <span class="kw">password</span> <span class="kw">FROM</span> <span class="fu">user</span> <span class="kw">ORDER</span> <span class="kw">BY</span> name <span class="kw">ASC</span></span></code></pre></div>
 </section>
 <section id="intégration-à-php" class="slide level2">
 <h2>Intégration à PHP</h2>
@@ -1518,7 +1512,7 @@ Chaque colonne est un <em>champ</em><br />
 Chaque ligne est une <em>entrée</em></p>
 <table>
 <thead>
-<tr class="header">
+<tr>
 <th>id</th>
 <th>name</th>
 <th>email</th>
@@ -1526,19 +1520,19 @@ Chaque ligne est une <em>entrée</em></p>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td>1</td>
 <td>Alice</td>
 <td>alice@ecv.fr</td>
 <td>1234567890</td>
 </tr>
-<tr class="even">
+<tr>
 <td>2</td>
 <td>Bob</td>
 <td>bob@ecv.fr</td>
 <td>mot_de_passe</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>5</td>
 <td>Charles</td>
 <td>charles@ecv.fr</td>
@@ -1578,19 +1572,19 @@ il faut installer <em>les bons drivers</em> (ici MySQL)</p>
 <h2>Comment ça fonctionne ?</h2>
 <p>On invoque un <em>objet</em> <code>PDO</code> qui permet<br />
 de connecter et requêter la BDD</p>
-<div class="sourceCode" id="cb67"><pre
-class="sourceCode php"><code class="sourceCode php"><span id="cb67-1"><a href="#cb67-1" aria-hidden="true" tabindex="-1"></a><span class="va">$dsn</span> <span class="op">=</span> <span class="st">&#39;mysql:host=localhost;dbname=my_recipes;charset=utf8&#39;</span><span class="ot">;</span></span>
-<span id="cb67-2"><a href="#cb67-2" aria-hidden="true" tabindex="-1"></a><span class="va">$bdd</span> <span class="op">=</span> <span class="kw">new</span> <span class="bu">PDO</span>(<span class="va">$dsn</span><span class="ot">,</span> <span class="st">&#39;user&#39;</span><span class="ot">,</span> <span class="st">&#39;password&#39;</span>)<span class="ot">;</span></span></code></pre></div>
+<div class="sourceCode" id="cb66"><pre
+class="sourceCode php"><code class="sourceCode php"><span id="cb66-1"><a href="#cb66-1" aria-hidden="true" tabindex="-1"></a><span class="va">$dsn</span> <span class="op">=</span> <span class="st">&#39;mysql:host=localhost;dbname=my_recipes;charset=utf8&#39;</span><span class="ot">;</span></span>
+<span id="cb66-2"><a href="#cb66-2" aria-hidden="true" tabindex="-1"></a><span class="va">$bdd</span> <span class="op">=</span> <span class="kw">new</span> <span class="bu">PDO</span>(<span class="va">$dsn</span><span class="ot">,</span> <span class="st">&#39;user&#39;</span><span class="ot">,</span> <span class="st">&#39;password&#39;</span>)<span class="ot">;</span></span></code></pre></div>
 </section>
 <section id="exemple-de-requête-1" class="slide level2">
 <h2>Exemple de requête</h2>
-<div class="sourceCode" id="cb68"><pre
-class="sourceCode php"><code class="sourceCode php"><span id="cb68-1"><a href="#cb68-1" aria-hidden="true" tabindex="-1"></a><span class="va">$req</span> <span class="op">=</span> <span class="va">$db</span>-&gt;prepare(<span class="st">&quot;SELECT name, colour FROM fruit&quot;</span>)<span class="ot">;</span></span>
-<span id="cb68-2"><a href="#cb68-2" aria-hidden="true" tabindex="-1"></a><span class="va">$req</span>-&gt;execute()<span class="ot">;</span></span>
-<span id="cb68-3"><a href="#cb68-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb68-4"><a href="#cb68-4" aria-hidden="true" tabindex="-1"></a><span class="co">// Récupère toutes les données</span></span>
-<span id="cb68-5"><a href="#cb68-5" aria-hidden="true" tabindex="-1"></a><span class="va">$result</span> <span class="op">=</span> <span class="va">$req</span>-&gt;fetchAll()<span class="ot">;</span></span>
-<span id="cb68-6"><a href="#cb68-6" aria-hidden="true" tabindex="-1"></a><span class="fu">print_r</span>(<span class="va">$result</span>)<span class="ot">;</span></span></code></pre></div>
+<div class="sourceCode" id="cb67"><pre
+class="sourceCode php"><code class="sourceCode php"><span id="cb67-1"><a href="#cb67-1" aria-hidden="true" tabindex="-1"></a><span class="va">$req</span> <span class="op">=</span> <span class="va">$db</span>-&gt;prepare(<span class="st">&quot;SELECT name, colour FROM fruit&quot;</span>)<span class="ot">;</span></span>
+<span id="cb67-2"><a href="#cb67-2" aria-hidden="true" tabindex="-1"></a><span class="va">$req</span>-&gt;execute()<span class="ot">;</span></span>
+<span id="cb67-3"><a href="#cb67-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb67-4"><a href="#cb67-4" aria-hidden="true" tabindex="-1"></a><span class="co">// Récupère toutes les données</span></span>
+<span id="cb67-5"><a href="#cb67-5" aria-hidden="true" tabindex="-1"></a><span class="va">$result</span> <span class="op">=</span> <span class="va">$req</span>-&gt;fetchAll()<span class="ot">;</span></span>
+<span id="cb67-6"><a href="#cb67-6" aria-hidden="true" tabindex="-1"></a><span class="fu">print_r</span>(<span class="va">$result</span>)<span class="ot">;</span></span></code></pre></div>
 </section></section>
 <section>
 <section id="les-requêtes" class="title-slide slide level1">
@@ -1606,34 +1600,46 @@ Par convention on écrit les <em>mots-clés en majuscule</em>.</p>
 <section id="create-database" class="slide level2">
 <h2><code>CREATE DATABASE</code></h2>
 <p>Pour créer une BDD</p>
-<div class="sourceCode" id="cb69"><pre
-class="sourceCode sql"><code class="sourceCode sql"><span id="cb69-1"><a href="#cb69-1" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">DATABASE</span> nomdelabase;</span></code></pre></div>
+<div class="sourceCode" id="cb68"><pre
+class="sourceCode sql"><code class="sourceCode sql"><span id="cb68-1"><a href="#cb68-1" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">DATABASE</span> nomdelabase;</span></code></pre></div>
 <p>Pour sélectionner la BDD on utilise:</p>
-<div class="sourceCode" id="cb70"><pre
-class="sourceCode sql"><code class="sourceCode sql"><span id="cb70-1"><a href="#cb70-1" aria-hidden="true" tabindex="-1"></a><span class="kw">USE</span> nomdelabase;</span></code></pre></div>
+<div class="sourceCode" id="cb69"><pre
+class="sourceCode sql"><code class="sourceCode sql"><span id="cb69-1"><a href="#cb69-1" aria-hidden="true" tabindex="-1"></a><span class="kw">USE</span> nomdelabase;</span></code></pre></div>
 </section>
 <section id="drop-database" class="slide level2">
 <h2><code>DROP DATABASE</code></h2>
 <p>Supprimer une BDD</p>
-<div class="sourceCode" id="cb71"><pre
-class="sourceCode sql"><code class="sourceCode sql"><span id="cb71-1"><a href="#cb71-1" aria-hidden="true" tabindex="-1"></a><span class="kw">DROP</span> <span class="kw">DATABASE</span> nomdelabase;</span></code></pre></div>
+<div class="sourceCode" id="cb70"><pre
+class="sourceCode sql"><code class="sourceCode sql"><span id="cb70-1"><a href="#cb70-1" aria-hidden="true" tabindex="-1"></a><span class="kw">DROP</span> <span class="kw">DATABASE</span> nomdelabase;</span></code></pre></div>
 </section>
 <section id="create-table" class="slide level2">
 <h2><code>CREATE TABLE</code></h2>
 <p>Permet de créer une table</p>
-<div class="sourceCode" id="cb72"><pre
-class="sourceCode sql"><code class="sourceCode sql"><span id="cb72-1"><a href="#cb72-1" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">TABLE</span> <span class="fu">user</span> (</span>
-<span id="cb72-2"><a href="#cb72-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">id</span> <span class="dt">INTEGER</span> <span class="kw">NOT</span> <span class="kw">NULL</span> AUTO_INCREMENT <span class="kw">PRIMARY</span> <span class="kw">KEY</span>,</span>
-<span id="cb72-3"><a href="#cb72-3" aria-hidden="true" tabindex="-1"></a>    name <span class="dt">VARCHAR</span>(<span class="dv">100</span>),</span>
-<span id="cb72-4"><a href="#cb72-4" aria-hidden="true" tabindex="-1"></a>    email <span class="dt">VARCHAR</span>(<span class="dv">255</span>) <span class="kw">NOT</span> <span class="kw">NULL</span> <span class="kw">UNIQUE</span>,</span>
-<span id="cb72-5"><a href="#cb72-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">password</span> <span class="dt">VARCHAR</span>(<span class="dv">100</span>) <span class="kw">NOT</span> <span class="kw">NULL</span></span>
-<span id="cb72-6"><a href="#cb72-6" aria-hidden="true" tabindex="-1"></a>);</span></code></pre></div>
+<div class="sourceCode" id="cb71"><pre
+class="sourceCode sql"><code class="sourceCode sql"><span id="cb71-1"><a href="#cb71-1" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">TABLE</span> <span class="fu">user</span> (</span>
+<span id="cb71-2"><a href="#cb71-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">id</span> <span class="dt">INTEGER</span> <span class="kw">NOT</span> <span class="kw">NULL</span> AUTO_INCREMENT <span class="kw">PRIMARY</span> <span class="kw">KEY</span>,</span>
+<span id="cb71-3"><a href="#cb71-3" aria-hidden="true" tabindex="-1"></a>    name <span class="dt">VARCHAR</span>(<span class="dv">100</span>),</span>
+<span id="cb71-4"><a href="#cb71-4" aria-hidden="true" tabindex="-1"></a>    email <span class="dt">VARCHAR</span>(<span class="dv">255</span>) <span class="kw">NOT</span> <span class="kw">NULL</span> <span class="kw">UNIQUE</span>,</span>
+<span id="cb71-5"><a href="#cb71-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">password</span> <span class="dt">VARCHAR</span>(<span class="dv">100</span>) <span class="kw">NOT</span> <span class="kw">NULL</span></span>
+<span id="cb71-6"><a href="#cb71-6" aria-hidden="true" tabindex="-1"></a>);</span></code></pre></div>
 </section>
 <section id="drop-table" class="slide level2">
 <h2><code>DROP TABLE</code></h2>
 <p>Permet de supprimer une table</p>
+<div class="sourceCode" id="cb72"><pre
+class="sourceCode sql"><code class="sourceCode sql"><span id="cb72-1"><a href="#cb72-1" aria-hidden="true" tabindex="-1"></a><span class="kw">DROP</span> <span class="kw">TABLE</span> <span class="fu">user</span>;</span></code></pre></div>
+</section>
+<section id="sous-requêtes" class="slide level2">
+<h2>Sous-requêtes</h2>
+<p>On peut combiner les requêtes</p>
 <div class="sourceCode" id="cb73"><pre
-class="sourceCode sql"><code class="sourceCode sql"><span id="cb73-1"><a href="#cb73-1" aria-hidden="true" tabindex="-1"></a><span class="kw">DROP</span> <span class="kw">TABLE</span> <span class="fu">user</span>;</span></code></pre></div>
+class="sourceCode sql"><code class="sourceCode sql"><span id="cb73-1"><a href="#cb73-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> <span class="op">*</span></span>
+<span id="cb73-2"><a href="#cb73-2" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> `table`</span>
+<span id="cb73-3"><a href="#cb73-3" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> `nom_colonne` <span class="op">=</span> (</span>
+<span id="cb73-4"><a href="#cb73-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">SELECT</span> `valeur`</span>
+<span id="cb73-5"><a href="#cb73-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">FROM</span> `table2`</span>
+<span id="cb73-6"><a href="#cb73-6" aria-hidden="true" tabindex="-1"></a>    <span class="kw">LIMIT</span> <span class="dv">1</span></span>
+<span id="cb73-7"><a href="#cb73-7" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
 </section></section>
 <section>
 <section id="les-entrées" class="title-slide slide level1">
@@ -1894,12 +1900,12 @@ cheatsheet</a></li>
     </div>
   </div>
 
-  <script src="https://unpkg.com/reveal.js@^4//dist/reveal.js"></script>
+  <script src="https://unpkg.com/reveal.js/dist/reveal.js"></script>
 
   <!-- reveal.js plugins -->
-  <script src="https://unpkg.com/reveal.js@^4//plugin/notes/notes.js"></script>
-  <script src="https://unpkg.com/reveal.js@^4//plugin/search/search.js"></script>
-  <script src="https://unpkg.com/reveal.js@^4//plugin/zoom/zoom.js"></script>
+  <script src="https://unpkg.com/reveal.js/plugin/notes/notes.js"></script>
+  <script src="https://unpkg.com/reveal.js/plugin/search/search.js"></script>
+  <script src="https://unpkg.com/reveal.js/plugin/zoom/zoom.js"></script>
 
   <script>
 

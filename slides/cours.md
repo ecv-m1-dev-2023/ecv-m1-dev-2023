@@ -820,6 +820,7 @@ Certaines vont nécessiter des libs `externes`
 
 # Débogage
 
+
 ## Afficher les erreurs
 
 `display_errors`  
@@ -880,21 +881,11 @@ Warning: Wrong parameter count for fonction() in fichier.php on line 112
 
 Ne pas hésiter à vérifier la doc
 
-## `Headers already sent`
+## XDEBUG
 
-Les headers sont *envoyés en premier* au navigateur  
+Pour débugger en "temps réel"
 
-On les envoie en utilisant la fonction `header`  
-
-Mais d'autres fonctions envoient aussi ces infos,  
-comme  `session_start` ou `setcookie`  
-
-Si on met des contenus avant ça génère l'erreur
-
-```html
-<html> <!-- La balise est avant les headers -->
-<?php session_start(); ?>
-```
+![](./images/stop-on-breakpoint.png)
 
 
 # Fichiers
@@ -1337,6 +1328,20 @@ Permet de supprimer une table
 
 ```sql
 DROP TABLE user;
+```
+
+## Sous-requêtes
+
+On peut combiner les requêtes
+
+```sql
+SELECT *
+FROM `table`
+WHERE `nom_colonne` = (
+    SELECT `valeur`
+    FROM `table2`
+    LIMIT 1
+)
 ```
 
 # Les entrées

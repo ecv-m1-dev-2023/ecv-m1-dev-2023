@@ -9,6 +9,9 @@ services:
       - ./php-conf.d/php.ini:/usr/local/etc/php/conf.d/custom-php.ini:ro
     ports:
       - "80:80"
+    extra_hosts:
+      # add host.docker.internal for linux
+      - host.docker.internal:host-gateway
 
   mysql:
     image: mariadb

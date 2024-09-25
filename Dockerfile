@@ -16,4 +16,5 @@ RUN apt-get update && docker-php-ext-install mysqli pdo pdo_mysql
 # Use the default development configuration
 RUN mv "$PHP_INI_DIR/php.ini-development" "$PHP_INI_DIR/php.ini"
 
+# Open port 80
 EXPOSE 80
