@@ -27,8 +27,4 @@ docker run -d --name php -v ./html:/var/www/html -v ./php-conf.d:/usr/local/etc/
 
 Une fois le container démarré, dirigez-vous vers [http://localhost/exercices](http://localhost/exercices)
 
-## Symfony
-
-A venir
-
 
