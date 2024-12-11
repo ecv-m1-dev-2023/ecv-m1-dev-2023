@@ -1,7 +1,6 @@
 services:
   php:
     build: .
-    restart: unless-stopped
     volumes:
       - ./html:/var/www/html
       - ./php-conf.d/php.ini:/usr/local/etc/php/conf.d/custom-php.ini:ro
@@ -13,7 +12,6 @@ services:
 
   mysql:
     image: mariadb
-    restart: always
     volumes:
       - ./mysql-conf.d/my.cnf:/etc/mysql/conf.d/my.cnf
       - ./data:/var/lib/mysql
@@ -24,7 +22,6 @@ services:
 
   adminer:
     image: adminer
-    restart: always
     ports:
       - "8080:8080"
 
