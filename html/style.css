@@ -3,6 +3,11 @@
   object-fit: cover;
 }
 
+.thumbimage {
+  width: 100px;
+  object-fit: cover;
+}
+
 .content {
   display: flex;
   gap: 1rem;
