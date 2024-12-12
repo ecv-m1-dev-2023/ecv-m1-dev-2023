@@ -3,11 +3,6 @@
   object-fit: cover;
 }
 
-.thumbimage {
-  width: 100px;
-  object-fit: cover;
-}
-
 .content {
   display: flex;
   gap: 1rem;
@@ -32,4 +27,27 @@ aside {
   padding: 1rem;
   border: 1px solid black;
   border-radius: 0.5rem;
+}
+
+article:not(:last-of-type) {
+  padding-bottom: 1rem;
+  border-bottom: 5px dotted greenyellow;
+}
+
+.minia {
+  display: flex;
+  gap: 2rem;
+}
+
+.thumbnail {
+  width: 150px;
+  border-radius: 10px;
+  border: 10px double skyblue;
+}
+
+.title {
+  font-family: sans-serif;
+  color: palevioletred;
+  font-style: italic;
+  text-decoration: underline;
 }
