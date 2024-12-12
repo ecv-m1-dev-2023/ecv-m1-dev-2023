@@ -51,3 +51,8 @@ article:not(:last-of-type) {
   font-style: italic;
   text-decoration: underline;
 }
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
