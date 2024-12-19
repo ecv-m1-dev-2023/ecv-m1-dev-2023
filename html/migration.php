@@ -7,7 +7,7 @@ $files = scandir($folder);
 
 // var_dump($files);
 
-foreach($files as $file) {
+foreach ($files as $file) {
     $filePath = $folder . $file;
     $fileInfo = pathinfo($filePath);
     if (!is_dir($filePath) && $fileInfo['extension'] == "sql") {
@@ -15,5 +15,7 @@ foreach($files as $file) {
         // var_dump($content);
         $req = $bdd->prepare($content);
         $req->execute();
+        echo "script : " . $filePath . " was run with success <br>";
+        echo "  --> <pre>" . $content . "</pre> <br><br>";
     }
 }
