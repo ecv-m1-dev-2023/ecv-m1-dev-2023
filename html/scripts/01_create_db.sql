@@ -1,1 +1,2 @@
-CREATE DATABASE `fake_reddit`;
+
+CREATE DATABASE IF NOT EXISTS `fake_reddit`;
