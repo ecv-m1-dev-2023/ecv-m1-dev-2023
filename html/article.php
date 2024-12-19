@@ -20,7 +20,7 @@
       <span><?= $article["author"] ?></span>
       <div class="content">
         <img src="<?= $article["img"] ?>" alt="chat" class="image">
-        <!-- <p class="description"><?= $article["desc"] ?></p> -->
+        <p class="description"><?= $article["content"] ?></p>
       </div>
     </article>
     <aside>

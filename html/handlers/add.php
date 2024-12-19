@@ -14,7 +14,7 @@ if (isset($filePath)) {
 }
 
 $articles[] = [
-    'id' => uniqid(),
+    'id' => hexdec(uniqid()),
     'title' => $_POST['title'],
     'date' => date('d/m/Y'),
     'author' => $_POST['author'],
