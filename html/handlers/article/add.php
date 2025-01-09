@@ -13,12 +13,18 @@ if (isset($filePath)) {
 }
 
 $request = load_script( $root . "/scripts/article/add.sql");
+$request->bindParam('title', $_POST['title']);
+
 $result = $request->execute([
   'title' => $_POST['title'],
-  'date' => date('d/m/Y'),
+  'date' => date('Y-m-d'),
   'author' => $_POST['author'],
   'img_url' => $newFileName,
   'content' => $_POST['content'],
 ]);
 
-header('Location: /index.php');
+echo '<pre>';
+$request->debugDumpParams();
+echo '</pre>';
+
+//header('Location: /index.php');
