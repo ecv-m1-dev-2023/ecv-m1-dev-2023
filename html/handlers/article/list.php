@@ -2,16 +2,16 @@
 
 $root = $_SERVER['DOCUMENT_ROOT'];
 
-include_once("$root/connect_database.php");
+include_once("$root/database.php");
 
-$request = load_script( $root . "/scripts/article/list.sql");
-$request->execute();
+function list_articles()
+{
+  global $root;
+  $bdd = connect_server('fake_reddit');
+  $request = load_script($bdd, $root . "/scripts/article/list.sql");
+  $request->execute();
 
-$articles = $request->fetchAll();
+  return $request->fetchAll(PDO::FETCH_ASSOC);
+}
 
-echo '<pre>';
-$request->debugDumpParams();
-echo '</pre>';
 
-var_dump($articles);
-die();

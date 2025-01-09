@@ -5,7 +5,10 @@
 </head>
 
 <body>
-<? include_once($_SERVER['DOCUMENT_ROOT'] . "/handlers/article/list.php"); ?>
+<?php
+include_once($_SERVER['DOCUMENT_ROOT'] . "/handlers/article/list.php");
+$articles = list_articles();
+?>
 <section>
   <?php if ($articles) : ?>
     <?php foreach ($articles as $article): ?>

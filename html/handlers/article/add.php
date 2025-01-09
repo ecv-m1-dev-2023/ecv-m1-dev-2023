@@ -2,7 +2,9 @@
 
 $root = $_SERVER['DOCUMENT_ROOT'];
 
-include_once("$root/connect_database.php");
+include_once("$root/database.php");
+
+$bdd = connect_server('fake_reddit');
 
 // handle image upload
 $filePath = $_FILES['article_img']['tmp_name'];
@@ -13,7 +15,7 @@ if (isset($filePath)) {
 }
 
 // add article into database
-$request = load_script( $root . "/scripts/article/add.sql");
+$request = load_script( $bdd, $root . "/scripts/article/add.sql");
 
 $result = $request->execute([
   'title' => $_POST['title'],
