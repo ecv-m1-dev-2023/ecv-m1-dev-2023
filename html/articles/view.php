@@ -1,22 +1,22 @@
 <html lang="fr">
 
 <head>
-  <link href="style.css" rel="stylesheet" />
+  <link href="../style.css" rel="stylesheet" />
 </head>
 
 <body>
   <?php
-  include_once("./data.php");
-  include_once("./functions.php");
+  include_once ($_SERVER['DOCUMENT_ROOT'].'/handlers/article/view.php');
 
   $id = $_GET["article"];
-  $article = getArticleById($id, $articles);
-  $comments = $article["comments"];
+  $article = view_article($id);
+  $comments = $article["comments"] ?? [];
+
   ?>
   <section>
     <article>
       <h1 class="title"><?= $article["title"] ?></h1>
-      <span><time><?= $article["date"] ?></time></span>
+      <span><time><?= format_sql_date($article["date"]) ?></time></span>
       <span><?= $article["author"] ?></span>
       <div class="content">
         <img src="<?= $article["img"] ?>" alt="chat" class="image">

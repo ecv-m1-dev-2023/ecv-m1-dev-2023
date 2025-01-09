@@ -13,14 +13,14 @@ $articles = list_articles();
   <?php if ($articles) : ?>
     <?php foreach ($articles as $article): ?>
       <article>
-        <?php include 'parts/article.php'; ?>
+        <?php include 'articles/article-list-item.php'; ?>
       </article>
     <?php endforeach; ?>
   <?php else : ?>
     <h3>Oops! Aucun article. :)</h3>
   <?php endif; ?>
   <aside>
-    <?php include 'forms/article-form.php'; ?>
+    <?php include 'articles/form.php'; ?>
   </aside>
 </section>
 </body>
