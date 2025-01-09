@@ -1,4 +1,4 @@
-<form action="/handlers/add.php" method="POST" class="form" enctype="multipart/form-data">
+<form action="/handlers/article/add.php" method="POST" class="form" enctype="multipart/form-data">
   <h3>Ajouter un article </h3>
   <label for="title"> Titre</label>
   <input type="text" name="title" required>

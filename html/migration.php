@@ -1,8 +1,8 @@
 <?php
 
-include_once("database.php");
+include_once("connect_database.php");
 
-$folder = "./scripts/";
+$folder = "./migrations/";
 $files = scandir($folder);
 
 // var_dump($files);
