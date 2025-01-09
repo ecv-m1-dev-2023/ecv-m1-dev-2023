@@ -10,13 +10,13 @@ services:
       # add host.docker.internal for linux
       - host.docker.internal:host-gateway
 
-  mysql:
+  db:
     image: mariadb
     volumes:
       - ./mysql-conf.d/my.cnf:/etc/mysql/conf.d/my.cnf
       - ./data:/var/lib/mysql
     environment:
-      MARIADB_ROOT_PASSWORD: mariadb_password
+      MARIADB_ROOT_PASSWORD: password
     ports:
       - "3306:3306"
 

@@ -1415,7 +1415,7 @@ Pour filtrer du texte :
 ```sql
 # les utilisateurs dont le mail fini par 'ecv.fr'
 SELECT * FROM user
-WHERE name LIKE '%ecv.fr';
+WHERE mail LIKE '%ecv.fr';
 ```
 
 ![](./images/mysql-percent.png)
